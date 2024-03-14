@@ -1,0 +1,13 @@
+.sidenav-wrapper{
+    position: absolute;
+}
+.mat-sidenav-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.sidenav{
+    width: 150px;
+    padding: 20px;
+}

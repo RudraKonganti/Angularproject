@@ -1,0 +1,34 @@
+.wrapper{
+    flex-wrap: wrap;
+    margin: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+.currency{
+    color: white;
+}
+
+mat-card-content{
+    align-items: center;
+}
+
+.example-card:hover img {
+    width: 350px;
+    
+  }
+   
+.example-card img{
+    width:100%;
+    height: 200px;
+    object-fit: contain;
+}
+.space{
+    flex: 1 1 auto;
+}
+a{
+  text-decoration: none;
+}
+button{
+    margin: 15px;
+}

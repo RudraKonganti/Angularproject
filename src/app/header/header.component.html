@@ -1,0 +1,46 @@
+<mat-toolbar>
+    <button (click)="nav.toggle()" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>Welcome To Electronics</span>
+    <span class="example-spacer"></span>
+      <mat-select>
+        <mat-option [routerLink]="['/electronics']" >select</mat-option>
+          <mat-option [routerLink]="['/electronics']" [queryParams]="{'category':'laptops'}" >Laptops  <mat-icon><span class="material-symbols-outlined"> laptop_mac </span></mat-icon></mat-option>
+          <mat-option [routerLink]="['/electronics']" [queryParams]="{'category':'mobiles'}" >Mobiles <mat-icon><span class="material-symbols-outlined">phone_android</span></mat-icon></mat-option>
+          <mat-option [routerLink]="['/electronics']" [queryParams]="{'category':'tv'}" >Tv <mat-icon><span class="material-symbols-outlined">tv</span></mat-icon></mat-option>
+      </mat-select>
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon>favorite</mat-icon>
+    </button>
+    <button matBadge="{{badge}}" [routerLink]="['cart']" mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon><span class="material-symbols-outlined">
+        shopping_cart 
+        </span></mat-icon>
+    </button>
+  </mat-toolbar>
+
+   <mat-sidenav-container class="sidenav-wrapper" >
+
+    <mat-sidenav class="sidenav" mode="side" #nav >
+
+      <button [routerLink]="['/register']"  mat-raised-button>AddCategory</button>
+      
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+
+      <router-outlet></router-outlet>
+      
+      
+
+    </mat-sidenav-content>
+
+  </mat-sidenav-container>
+ 
+
+
+
+
+
+ 

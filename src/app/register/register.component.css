@@ -1,0 +1,13 @@
+input.ng-invalid.ng-touched{
+  border: 2px solid red;
+}
+input.ng-touched.ng-valid{
+  border: 2px solid green;
+}
+
+.custom-input{
+  width: 2000px;
+}
+.custom{
+  width: 20 0px;
+}

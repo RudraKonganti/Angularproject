@@ -1,0 +1,24 @@
+<div class="wrapper">
+    <ng-container  *ngFor="let e of Electronics"> 
+        <mat-card class="example-card">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>{{e['title']}}</mat-card-title>
+          <mat-card-subtitle></mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image height="250px" width="250px" src="{{e.image}}" >
+        <span class="clspace" ></span>
+        <mat-card-content class="currency" >
+          Price: {{e['price']|currency:'INR'}}
+          </mat-card-content>
+          <span class="crspace" ></span>
+        <br>
+        <mat-card-actions>
+          <button mat-raised-button color="accent" >BuyNow</button>
+          <button mat-raised-button color="primary" (click)="addtocart(e)">AddToCart</button>
+          <span class="space"></span>
+        </mat-card-actions>
+      </mat-card>
+  
+    </ng-container>
+    </div>

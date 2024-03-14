@@ -1,0 +1,39 @@
+
+
+  <form [formGroup]="regForm">
+    <div class="custom-input">
+      <mat-form-field >
+        ID:<input type="number" formControlName="id"  ><br>
+       <p *ngIf="regForm.get('id').touched&& regForm.get('id').errors">required</p>
+     </mat-form-field><br>
+
+     <mat-form-field>
+       title:<input type="text" formControlName="title"><br>
+      <p *ngIf="regForm.get('title').touched&& regForm.get('title').errors" >required</p>
+    </mat-form-field><br>
+
+    <mat-form-field>
+      Image:<input type="file"  formControlName="image" ><br>
+     <p *ngIf="regForm.get('image').touched&& regForm.get('image').errors">required</p>
+   </mat-form-field><br>
+
+    <mat-form-field>
+       price:<input type="number" formControlName="price"><br>
+      <p *ngIf="regForm.get('price').touched&& regForm.get('price').errors">required</p>
+    </mat-form-field><br>
+    
+    <mat-form-field>
+       category:<input type="text" formControlName="category" ><br>
+       <p *ngIf="regForm.get('category').touched&& regForm.get('category').errors">required</p>
+      <p *ngIf=" regForm.get('category').errors?.['duplicated']">Enter Valid category</p>
+    </mat-form-field><br>
+    </div>
+   <button mat-raised-button color="accent" (click)="submit(regForm)">AddCategory</button>
+
+   </form>
+  
+
+
+
+
+  
